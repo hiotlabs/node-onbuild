@@ -7,11 +7,11 @@ Like official docker node onbuild image, with a few changes:
  
 ## building
 
+From this folder, run:
+
 ```bash
-$ docker build -t hiotlabs/node-onbuild:4.1 .
+$ docker build -t hiotlabs/node-onbuild:4.1 ./4.1
 ```
 
 ## credits
-Ideas come from 
-http://www.grahamgilchrist.com/blog/2015/05/13/node-packages-docker-and-node-onbuild-container 
-and https://github.com/b00giZm/docker-compose-nodejs-examples
+Ideas come from [here](http://www.grahamgilchrist.com/blog/2015/05/13/node-packages-docker-and-node-onbuild-container) and [there](https://github.com/b00giZm/docker-compose-nodejs-examples).
