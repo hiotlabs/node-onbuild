@@ -4,10 +4,10 @@ Like official docker node onbuild image, with a few changes:
 
 1. assuming the node app source is located in local subfolder `app`.
 2. installing npm packages one level up in `/usr/src`, making way for having the local `app` folder mounted as a volume.
- 
+
 ## building
 
-From this folder, run:
+From root folder of this repo, run:
 
 ```bash
 $ docker build -t hiotlabs/node-onbuild:4.1 ./4.1
