@@ -20,17 +20,19 @@ Assuming a folder structure such as:
     └── Dockerfile
 ```
 
+
 `node/Dockerfile`:
 
 ```
 FROM hiotlabs/node-onbuild:4.1
 ```
 
+
 Then we can have a `docker-compose.yml` for development:
 
 ```
 node:
-  image: hiotlabs/node-onbuild:4.1
+  build: ./node
   volumes:
     - ./node/app:/usr/src/app
   ports:
