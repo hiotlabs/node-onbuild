@@ -1,16 +1,41 @@
 # node-onbuild
 
-Like official docker node onbuild image, with a few changes:
+Like official docker node onbuild image, with a few changes and additions:
 
 1. assuming the node app source is located in local subfolder `app`.
-2. installing npm packages one level up in `/usr/src`, making way for having the local `app` folder mounted as a volume.
+2. installing npm packages one level up in `/usr/src`, making way for having the local `app` folder mounted as a volume in dev.
+3. include nodemon for smoother dev cycles.
 
-## building
+## use
 
-From root folder of this repo, run:
+Assuming a folder structure such as:
 
-```bash
-$ docker build -t hiotlabs/node-onbuild:4.1 ./4.1
+```
+.
+├── docker-compose.yml
+└── node
+    ├── app
+    │   ├── app.js
+    │   └── package.json”
+    └── Dockerfile
+```
+
+`node/Dockerfile`:
+
+```
+FROM hiotlabs/node-onbuild:4.1
+```
+
+Then we can have a `docker-compose.yml` for development:
+
+```
+node:
+  image: hiotlabs/node-onbuild:4.1
+  volumes:
+    - ./node/app:/usr/src/app
+  ports:
+    - "3000:3000"
+  command: nodemon -L app.js
 ```
 
 ## credits
