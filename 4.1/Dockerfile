@@ -15,7 +15,4 @@ ONBUILD COPY app /usr/src/app
 # Reset working dir for running project commands
 ONBUILD WORKDIR /usr/src/app
 
-# nodemon for use in dev workflow
-RUN npm install -g nodemon
-
 CMD [ "npm", "start" ]
