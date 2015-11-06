@@ -5,16 +5,15 @@ npm packages one level above the app folder. Modules will still
 be found but won't be overridden when mounting the project
 directory for development.
 
-## development setup
-
-`Dockerfile`:
+## Use in development setup
+Dockerfile:
 
 ```
-FROM hiotlabs/node-onbuild:4.1
+FROM hiotlabs/node-onbuild:5.0
 RUN npm install -g supervisor
 ```
 
-`docker-compose.yml`:
+docker-compose.yml:
 
 ```
 node:
@@ -23,5 +22,6 @@ node:
     - .:/usr/src/app
   command: supervisor -e js,json app.js
 ```
-## credits
+
+## Credits
 Ideas come from [here](http://www.grahamgilchrist.com/blog/2015/05/13/node-packages-docker-and-node-onbuild-container) and [there](https://github.com/b00giZm/docker-compose-nodejs-examples).
