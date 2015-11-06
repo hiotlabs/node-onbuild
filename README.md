@@ -9,7 +9,7 @@ directory for development.
 Dockerfile:
 
 ```
-FROM hiotlabs/node-onbuild:5.0
+FROM hiotlabs/node-onbuild:latest
 RUN npm install -g supervisor
 ```
 
