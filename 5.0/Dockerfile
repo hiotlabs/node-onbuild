@@ -15,6 +15,4 @@ ONBUILD COPY . /usr/src/app
 # Reset working dir for running project.
 ONBUILD WORKDIR /usr/src/app
 
-VOLUME /usr/src/app
-
 CMD [ "npm", "start" ]
