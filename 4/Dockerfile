@@ -15,4 +15,4 @@ ONBUILD COPY . /usr/src/app
 # Reset working dir for running project.
 ONBUILD WORKDIR /usr/src/app
 
-CMD [ "npm", "start" ]
+CMD [ "node", "app.js" ]
