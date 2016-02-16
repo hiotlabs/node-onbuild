@@ -6,7 +6,7 @@ be found but won't be overridden when mounting the project
 directory for development.
 
 # Breaking change
-2016-02-16: Now using `CMD [ "node", "app.js" ] instead of `npm start`, due to
+❗️2016-02-16: Now using `CMD [ "node", "app.js" ]`` instead of `npm start`, due to
 npm not forwarding signals such as SIGTERM.
 
 ## Use in development setup

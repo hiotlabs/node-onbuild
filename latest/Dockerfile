@@ -15,4 +15,5 @@ ONBUILD COPY . /usr/src/app
 # Reset working dir for running project.
 ONBUILD WORKDIR /usr/src/app
 
+# Don't use npm for running node, it doesn't forward SIGTERM.
 CMD [ "node", "app.js" ]
