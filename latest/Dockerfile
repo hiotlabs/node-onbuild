@@ -9,6 +9,7 @@ WORKDIR /usr/src/app
 # host machine) and will take preference being in the project directory.
 ONBUILD WORKDIR /usr/src
 ONBUILD COPY package.json /usr/src/
+ONBUILD COPY package-lock.json /usr/src/
 ONBUILD RUN npm install
 ONBUILD COPY . /usr/src/app
 
